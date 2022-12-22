@@ -12,8 +12,9 @@ from .managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-
+    
     name= models.CharField(max_length=50, default='')
+    username=models.CharField(max_length=50, default='')
     last_name= models.CharField(max_length=60, default='')
     password=models.CharField(max_length=60, default='')
     is_active = models.BooleanField(default=False)
