@@ -15,5 +15,9 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=SET_NULL, null=True)
     
     
+    def __str__(self):
+        return self.title
+    
+    
     
     

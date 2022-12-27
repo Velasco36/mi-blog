@@ -9,6 +9,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = (
             'name',
             'last_name',
+            'username',
             'email',
             'password',
             
