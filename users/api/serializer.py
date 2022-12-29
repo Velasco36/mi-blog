@@ -7,10 +7,9 @@ class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'name',
-            'last_name',
-            'username',
+            'id',
             'email',
+            'username',
             'password',
             
         )
@@ -25,7 +24,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     
     
 class UserSerializer(serializers.ModelSerializer): 
-    class Meta:
+    class Meta: 
         model = User
         fields =['id', 'email','username',  'name', 'last_name', ]
         

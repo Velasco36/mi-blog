@@ -10,15 +10,14 @@ from .serializer import *
 
 
 class RegisterView(APIView):
-    
+    """ 
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
     name = 'register'
     
-    
-    
-    
+    """    
     def post(self, request):
+        print('regisrando usuario')
         serializer = RegisterSerializer(data=request.data)
         
         if serializer.is_valid(raise_exception=True):
